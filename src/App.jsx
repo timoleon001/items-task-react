@@ -1,20 +1,20 @@
 /* eslint-disable no-restricted-globals */
 import { useState, useEffect } from "react";
 import "./App.css";
-import { setAllItems, updateItems } from "./data/data";
+import { getInitialItems, saveItems } from "./data/data";
 import TaskInput from "./components/TaskInput";
 import TaskControls from "./components/TaskControls";
 import TaskList from "./components/TaskList";
 
 function App() {
-  const [items, setItems] = useState(setAllItems());
+  const [items, setItems] = useState(getInitialItems());
   const [input, setInput] = useState("");
   const [inputValid, setInputValid] = useState(false);
   const [sortDirection, setSortDirection] = useState("asc");
   const [visibleChecked, setVisibleChecked] = useState(false);
 
   useEffect(() => {
-    updateItems(items);
+    saveItems(items);
   }, [items]);
 
   function addItem() {
