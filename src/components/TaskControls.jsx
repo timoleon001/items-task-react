@@ -10,6 +10,7 @@ export default function TaskControls({
     <div className="row-controls">
       <div>
         <button
+          className="btn btn-error"
           onClick={() => {
             if (confirm(`Вы уверены, что хотите все удалить`)) setItems([]);
           }}>
@@ -17,12 +18,14 @@ export default function TaskControls({
         </button>
       </div>
       <div>
-        <button onClick={() => setVisibleChecked((prev) => !prev)}>
+        <button
+          className="btn btn-success"
+          onClick={() => setVisibleChecked((prev) => !prev)}>
           {visibleChecked ? "Показать отмеченные" : "Скрыть отмеченные"}
         </button>
       </div>
       <div>
-        <button onClick={handleSort}>
+        <button className="btn" onClick={handleSort}>
           Сортировать по алфавиту {sortDirection === "asc" ? "A-Z" : "Z-A"}
         </button>
       </div>

@@ -13,7 +13,7 @@ export default function TaskInput({
         value={input}
         onChange={(e) => onChangeInput(e)}
         onKeyDown={handlePressKey}
-        placeholder="Добавить новую покупку"
+        placeholder="Добавить новую задачу"
         style={{ border: inputValid ? "1px solid red" : "" }}
       />
       <button className="btn" onClick={onClickBtn}>

@@ -13,8 +13,21 @@
 .btn:hover {
   opacity: 0.7;
 }
+.btn-error {
+  background-color: #e96666;
+}
+.btn-success {
+  background-color: #5a45f5;
+}
+
+.row-btn {
+  display: flex;
+  gap: 1rem;
+}
 
 .tasks-items-wrapper {
+  display: flex;
+  gap: 1rem;
   margin-bottom: 1rem;
 }
 .row-controls {
@@ -24,6 +37,9 @@
 }
 
 .ul-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -33,5 +49,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1rem;
   text-align: left;
+}
+.ul-list .col-data {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 150px;
+  overflow: hidden;
 }

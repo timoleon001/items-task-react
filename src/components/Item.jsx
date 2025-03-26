@@ -26,7 +26,7 @@ export default function Item({ item, onEdit, onDelete, onChecked, visible }) {
               onBlur={() => handleInputBlur()}
             />
           ) : (
-            <div>
+            <div className="col-data">
               <span className="check">
                 <input
                   type="checkbox"
@@ -39,15 +39,16 @@ export default function Item({ item, onEdit, onDelete, onChecked, visible }) {
               <label htmlFor={item.id}>{item.text}</label>
             </div>
           )}
-          <div>
+          <div className="row-btn">
             <button
+              className="btn"
               onClick={() => {
                 setEditId(item.id);
                 setEditValue(item.text);
               }}>
               Редактировать
             </button>
-            <button className="btn" onClick={() => onDelete(item.id)}>
+            <button className="btn btn-error" onClick={() => onDelete(item.id)}>
               Delete
             </button>
           </div>
